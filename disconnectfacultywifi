@@ -7,7 +7,7 @@ if [ "$(/usr/sbin/networksetup -getairportnetwork en0)"="Current Wi-Fi Network: 
   /usr/bin/security delete-generic-password -a "Faculty_Access" /Library/Keychains/System.keychain
   user=$(ls /Users | grep -v ".localized" | grep -v "Shared"| grep -v "Guest" | grep -v ".DS_Store" | grep -v "admin")
   keychain=$(ls /Users/$user/Library/Keychains | grep -v "login.keychain-db" | grep -v ".f" | grep -v "metadata.keychain-db")
-  /bin/rm -rf /Users/$user/Library/Keychains/$keychainements
+  /bin/rm -rf /Users/$user/Library/Keychains/$keychain
 else
   echo "Not Connected to Faculty_Access"
 fi
