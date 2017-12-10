@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 if [ "$(/usr/sbin/networksetup -getairportnetwork en0)"="Current Wi-Fi Network: Faculty_Access" ]; then
   /usr/sbin/networksetup -removepreferredwirelessnetwork en0 "Faculty_Access"
